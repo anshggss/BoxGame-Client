@@ -67,7 +67,7 @@ function draw() {
       player.name == "tviiiiiii" ||
       player.name == "tviiiiiiii" ||
       player.name == "tis pis" ||
-      player.name == "tispis" ||
+      player.name == "tispis"
     ) {
       const image = new Image(player.width, player.width);
       image.src = "heart.png";
