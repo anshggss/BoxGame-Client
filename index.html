@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trial Game</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="nameScreen">
+      <div class="nameBox">
+        <h2>Enter The Arena</h2>
+        <p>Choose your name and join the battle</p>
+        <input
+          type="text"
+          id="nameInput"
+          placeholder="Your name..."
+          autofocus
+        />
+        <button id="startBtn" onclick="handleClick()">Start Game</button>
+      </div>
+    </div>
+
+    <canvas id="gameCanvas"></canvas>
+    <script
+      src="https://cdn.socket.io/4.8.3/socket.io.min.js"
+      integrity="sha384-kzavj5fiMwLKzzD1f8S7TeoVIEi7uKHvbTA3ueZkrzYq75pNQUiUi6Dy98Q3fxb0"
+      crossorigin="anonymous"
+    ></script>
+    <script src="index.js"></script>
+    <script src="game.js"></script>
+  </body>
+</html>
