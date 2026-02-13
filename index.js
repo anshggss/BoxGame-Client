@@ -1,4 +1,4 @@
-const socket = io("http://localhost:3000");
+const socket = io("https://boxgame-server.onrender.com/");
 let canvas = document.getElementById("gameCanvas");
 let ctx = canvas.getContext("2d");
 let pName = "";

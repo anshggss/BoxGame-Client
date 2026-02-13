@@ -81,4 +81,4 @@ function update() {
 update();
 setInterval(() => {
   socket.emit("inputs", keys);
-}, 1000 / 120);
+}, 1000 / 60);
