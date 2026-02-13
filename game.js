@@ -57,11 +57,24 @@ function draw() {
       player.name == "tvisha" ||
       player.name == "pis" ||
       player.name == "tv" ||
-      player.name == "tisha"
+      player.name == "tisha" ||
+      player.name == "tvi" ||
+      player.name == "tvii" ||
+      player.name == "tviii" ||
+      player.name == "tviiii" ||
+      player.name == "tviiiii" ||
+      player.name == "tviiiiii" ||
+      player.name == "tviiiiiii" ||
+      player.name == "tviiiiiiii" ||
+      player.name == "tis pis" ||
+      player.name == "tispis" ||
     ) {
       const image = new Image(player.width, player.width);
       image.src = "heart.png";
       ctx.drawImage(image, player.x, player.y, player.width, player.height);
+      ctx.font = "30px Arial";
+      ctx.fillStyle = "white";
+      ctx.fillText(player.name, player.x, player.y - 10);
     } else {
       ctx.fillStyle = player.color;
       ctx.fillRect(player.x, player.y, player.width, player.height);
