@@ -1,4 +1,4 @@
-const socket = io("https://boxgame-server.onrender.com/");
+const socket = io("http://localhost:3000");
 let canvas = document.getElementById("gameCanvas");
 let ctx = canvas.getContext("2d");
 let pName = "";
@@ -22,6 +22,7 @@ button.addEventListener("click", () => {
 let myID = null;
 let world = null;
 let players = null;
+let target = null;
 
 socket.on("connect", () => {
   console.log(socket.id);
@@ -33,6 +34,6 @@ socket.on("init", (newWorld) => {
   resizeCanvas();
 });
 
-socket.on("config", (state) => {
-  players = state;
+socket.on("gameState", (state) => {
+  ({ target, players } = state);
 });
