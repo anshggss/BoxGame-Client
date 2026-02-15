@@ -1,4 +1,4 @@
-const socket = io("http://mincraft.shadyggs.xyz:9999");
+const socket = io("https://server.boxgame.shadyggs.xyz");
 let canvas = document.getElementById("gameCanvas");
 let ctx = canvas.getContext("2d");
 let pName = "";
