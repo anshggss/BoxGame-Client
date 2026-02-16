@@ -1,4 +1,4 @@
-const socket = io("https://server.boxgame.shadyggs.xyz", {
+const socket = io("http://localhost:3000", {
   // Reduce reconnection spam
   reconnectionDelay: 1000,
   reconnectionDelayMax: 5000,
