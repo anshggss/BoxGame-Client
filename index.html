@@ -8,20 +8,56 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+
+    <!-- ===== LOBBY SCREEN ===== -->
     <div id="nameScreen">
-      <div class="nameBox">
-        <h2>Enter your name</h2>
-        <input
-          type="text"
-          id="nameInput"
-          placeholder="Your name..."
-          autofocus
-        />
-        <button id="startBtn">Start Game</button>
+      <div class="nameBox" id="lobbyBox">
+        <h2>Box Game</h2>
+        <p>Jump, collect hearts, beat your friends.</p>
+
+        <label class="field-label">Your Name</label>
+        <input type="text" id="nameInput" placeholder="Enter your name…" maxlength="15" autofocus />
+
+        <div class="divider"><span>choose a room</span></div>
+
+        <!-- Create Room -->
+        <button id="createRoomBtn" class="btn-primary">✦ Create Private Room</button>
+
+        <!-- Join Room -->
+        <div class="join-row">
+          <input type="text" id="roomCodeInput" placeholder="Room code…" maxlength="5" />
+          <button id="joinRoomBtn" class="btn-secondary">Join</button>
+        </div>
+
+        <p id="lobbyError" class="error-msg"></p>
+      </div>
+    </div>
+
+    <!-- ===== IN-GAME HUD ===== -->
+    <div id="hud" style="display:none;">
+      <button id="menuBtn" title="Options">☰</button>
+      <div id="roomBadge"></div>
+    </div>
+
+    <!-- ===== OPTIONS MODAL (in-game) ===== -->
+    <div id="optionsModal" style="display:none;">
+      <div class="modal-box">
+        <h3>Options</h3>
+
+        <label class="field-label">Change Name</label>
+        <input type="text" id="newNameInput" placeholder="New name…" maxlength="15" />
+        <button id="saveNameBtn" class="btn-primary">Save Name</button>
+
+        <div class="divider"></div>
+        <div id="roomInfo"></div>
+
+        <button id="copyCodeBtn" class="btn-secondary" style="margin-top:8px;">Copy Room Code</button>
+        <button id="closeModalBtn" class="btn-ghost" style="margin-top:8px;">Close</button>
       </div>
     </div>
 
     <canvas id="gameCanvas"></canvas>
+
     <script
       src="https://cdn.socket.io/4.8.3/socket.io.min.js"
       integrity="sha384-kzavj5fiMwLKzzD1f8S7TeoVIEi7uKHvbTA3ueZkrzYq75pNQUiUi6Dy98Q3fxb0"
